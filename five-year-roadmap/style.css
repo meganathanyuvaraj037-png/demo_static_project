@@ -1,59 +1,100 @@
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
+/* ================================
+   5-YEAR ROADMAP STYLES
+================================ */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 40px;
-    background-color: #f4f7fb;
-    color: #333;
+  background: var(--bg);
+  color: var(--ink);
 }
 
+/* ================================
+   PAGE HEADING
+================================ */
+
 h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 10px;
+  text-align: center;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-top: 3rem;
+  margin-bottom: 12px;
+  color: var(--ink);
 }
 
 .intro {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #666;
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
+
+/* ================================
+   ROADMAP
+================================ */
 
 .roadmap {
-    max-width: 800px;
-    margin: auto;
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 30px;
 }
 
+/* ================================
+   YEAR CARDS
+================================ */
+
 .year {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.year:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand);
 }
 
 .year h2 {
-    margin-top: 0;
-    font-size: 24px;
-    margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.year p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
 .year ul {
-    line-height: 1.8;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 32px;
+    padding: 0 20px;
+  }
+
+  .intro {
+    padding: 0 20px;
+  }
+
+  .roadmap {
+    padding: 0 20px;
+  }
+
+  .year {
+    padding: 24px;
+  }
 }

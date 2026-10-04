@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Professional Experience | 5+ Years IT Industry</title>
+
+    <!-- Google Fonts: Manrope & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Experience Page Specific Enhancements */
+      .exp-company-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .exp-company-card:hover {
+        border-color: var(--brand);
+        transform: translateY(-2px);
+      }
+      .exp-header-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .company-title-area h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
+      }
+      .company-subtitle {
+        color: var(--brand);
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .badge-group {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .exp-duration-badge {
+        background: var(--brand-light);
+        color: var(--brand);
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.35rem 0.8rem;
+        border-radius: 6px;
+      }
+      .exp-type-badge {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 0.35rem 0.8rem;
+        border-radius: 6px;
+      }
+      .exp-body-text {
+        color: var(--muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+      .exp-highlights-title {
+        font-size: 0.95rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--ink);
+        margin-bottom: 0.8rem;
+      }
+      .exp-bullet-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+      }
+      .exp-bullet-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.65rem;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.6;
+      }
+      .exp-bullet-list li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--brand);
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      .tech-stack-container {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1.1rem;
+      }
+      .tech-stack-label {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--brand);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.6rem;
+      }
+      .skills-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+      .skill-pill {
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .early-roles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.2rem;
+        margin-top: 1.2rem;
+      }
+      .early-role-card {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1.2rem;
+      }
+      .early-role-card h4 {
+        font-size: 1.05rem;
+        color: var(--ink);
+        margin-bottom: 0.2rem;
+      }
+      .early-role-company {
+        font-size: 0.88rem;
+        color: var(--brand);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .early-role-card p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+      <div class="wrap bar">
+        <a class="logo" href="index.html" id="logoName">Portfolio Website</a>
+        <nav>
+          <a class="hide-sm" href="index.html">Home</a>
+          <a class="hide-sm" href="skills.html">Skills</a>
+          <a class="hide-sm active" href="experience.html">Experience</a>
+          <a class="hide-sm" href="projects/projects.html">Projects</a>
+          <a href="five-year-roadmap/five-year-roadmap.html">5-Year Vision</a>
+          <a class="hide-sm" href="index.html#contact">Contact</a>
+          <button
+            class="icon-btn"
+            id="themeBtn"
+            aria-label="Switch between light and dark theme"
+          >
+            Dark mode
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO HEADER FOR EXPERIENCE PAGE -->
+      <section class="page-header">
+        <div class="wrap">
+          <span
+            class="cat-badge"
+            style="margin-bottom: 0.8rem; display: inline-block"
+            >5+ Years IT Industry Experience</span
+          >
+          <h1>Professional Experience & Milestones</h1>
+          <p>
+            Over 5+ years of combined experience delivering enterprise IT
+            infrastructure, Adobe Experience Manager (AEM 6.5) solutions,
+            network operations, cloud services, and full-stack web applications.
+          </p>
+
+          <!-- STATS CARDS -->
+          <div class="skills-stats">
+            <div class="stat-card">
+              <div class="num">5+</div>
+              <div class="label">Years Total IT Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">3+</div>
+              <div class="label">Years at TCS</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">2+</div>
+              <div class="label">Years at Sify Technologies</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">99.9%</div>
+              <div class="label">Infrastructure Uptime</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN EXPERIENCE CONTENT SECTION -->
+      <section style="padding-top: 0">
+        <div class="wrap">
+          <!-- FILTER & SEARCH CONTROLS -->
+          <div class="controls-bar">
+            <div class="filter-tags" id="filterTags">
+              <button class="filter-btn active" data-filter="all">
+                All Experience
+              </button>
+              <button class="filter-btn" data-filter="sify">
+                Sify Technologies (2+ Yrs)
+              </button>
+              <button class="filter-btn" data-filter="tcs">TCS (3+ Yrs)</button>
+              <button class="filter-btn" data-filter="early">
+                Internships & Early Roles
+              </button>
+            </div>
+            <div class="search-box">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search roles, skills, tools..."
+              />
+            </div>
+          </div>
+
+          <!-- CARDS CONTAINER -->
+          <div id="experienceContainer">
+            <!-- 1. SIFY TECHNOLOGIES LIMITED (2+ YEARS) -->
+            <article class="exp-company-card" data-category="sify">
+              <div class="exp-header-top">
+                <div class="company-title-area">
+                  <h2>Engineer - Network Operations</h2>
+                  <div class="company-subtitle">Sify Technologies Limited</div>
+                </div>
+                <div class="badge-group">
+                  <span class="exp-duration-badge"
+                    >July 2023 – Present (2+ Years)</span
+                  >
+                  <span class="exp-type-badge">Full-time</span>
+                </div>
+              </div>
+
+              <div class="exp-body-text">
+                Results-driven IT professional managing enterprise network
+                operations and infrastructure at Sify Technologies Limited. Key
+                responsibilities include monitoring network health,
+                troubleshooting connectivity and routing issues, maintaining
+                high network availability, integrating cloud infrastructure with
+                AWS, and executing modern front-end web design and interface
+                development.
+              </div>
+
+              <div class="exp-highlights-title">
+                Key Responsibilities & Achievements
+              </div>
+              <ul class="exp-bullet-list">
+                <li>
+                  Manage and maintain enterprise network infrastructure,
+                  ensuring seamless connectivity and high network availability
+                  (99.9%+ uptime SLA).
+                </li>
+                <li>
+                  Perform in-depth network troubleshooting, protocol diagnostics
+                  (TCP/IP suite), routing configuration, and wireless network
+                  optimization across client endpoints.
+                </li>
+                <li>
+                  Utilize Amazon Web Services (AWS) for cloud infrastructure
+                  integration, resource monitoring, and security group
+                  administration.
+                </li>
+                <li>
+                  Develop responsive, accessible front-end web interfaces using
+                  HTML5, CSS3, JavaScript, and Figma prototypes for digital
+                  operations.
+                </li>
+                <li>
+                  Collaborate with cross-functional technical teams to resolve
+                  incident tickets rapidly and maintain comprehensive network
+                  documentation.
+                </li>
+              </ul>
+
+              <div class="tech-stack-container">
+                <div class="tech-stack-label">
+                  Core Competencies & Technologies Earned
+                </div>
+                <div class="skills-pills">
+                  <span class="skill-pill">Networking</span>
+                  <span class="skill-pill">TCP/IP Protocol Suite</span>
+                  <span class="skill-pill">Routing & Switching</span>
+                  <span class="skill-pill">Wireless Networking</span>
+                  <span class="skill-pill">Network Troubleshooting</span>
+                  <span class="skill-pill">Amazon Web Services (AWS)</span>
+                  <span class="skill-pill">HTML5</span>
+                  <span class="skill-pill">CSS3</span>
+                  <span class="skill-pill">JavaScript</span>
+                  <span class="skill-pill">Front-End Development</span>
+                  <span class="skill-pill">Figma (Software)</span>
+                  <span class="skill-pill">Web Design</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. TATA CONSULTANCY SERVICES (TCS) (3+ YEARS) -->
+            <article class="exp-company-card" data-category="tcs">
+              <div class="exp-header-top">
+                <div class="company-title-area">
+                  <h2>IT Professional / AEM & Systems Engineer</h2>
+                  <div class="company-subtitle">
+                    Tata Consultancy Services (TCS)
+                  </div>
+                </div>
+                <div class="badge-group">
+                  <span class="exp-duration-badge">3+ Years</span>
+                  <span class="exp-type-badge">Full-time</span>
+                </div>
+              </div>
+
+              <div class="exp-body-text">
+                Experienced IT professional with over 3+ years of dedicated
+                service at TCS. Specialized in Adobe Experience Manager (AEM
+                6.5) development, digital experience delivery, system
+                optimization, and CI/CD integration. Built scalable,
+                multilingual digital applications while managing caching layers,
+                CDN distributions, API integrations, and cloud monitoring.
+              </div>
+
+              <div class="exp-highlights-title">
+                Key Responsibilities & Achievements
+              </div>
+              <ul class="exp-bullet-list">
+                <li>
+                  Architected and developed custom AEM components, Sling Models,
+                  HTL templates, and Content Fragments for enterprise clients.
+                </li>
+                <li>
+                  Configured and managed Apache Dispatcher caching rules,
+                  rewrite rules, and security filters to optimize page delivery
+                  speed and security.
+                </li>
+                <li>
+                  Integrated digital personalization using Adobe Target and
+                  handled content delivery acceleration via Akamai CDN.
+                </li>
+                <li>
+                  Designed and consumed REST APIs, integrated Postman test
+                  suites, and managed version control workflows using Git and
+                  Bitbucket.
+                </li>
+                <li>
+                  Monitored application health and server metrics using
+                  AppDynamics and AWS CloudWatch; automated deployment pipelines
+                  with Jenkins.
+                </li>
+                <li>
+                  Engaged in Agile/Scrum ceremonies, sprint planning, and
+                  cross-functional collaboration to deliver robust, user-centric
+                  software releases.
+                </li>
+              </ul>
+
+              <div class="tech-stack-container">
+                <div class="tech-stack-label">
+                  Core Competencies & Technologies Earned
+                </div>
+                <div class="skills-pills">
+                  <span class="skill-pill"
+                    >Adobe Experience Manager (AEM 6.5)</span
+                  >
+                  <span class="skill-pill">Adobe Target</span>
+                  <span class="skill-pill">Sling Models</span>
+                  <span class="skill-pill">HTL (HTML Template Language)</span>
+                  <span class="skill-pill">Content Fragments</span>
+                  <span class="skill-pill">Apache Dispatcher</span>
+                  <span class="skill-pill">Akamai CDN</span>
+                  <span class="skill-pill">AppDynamics</span>
+                  <span class="skill-pill">AWS CloudWatch</span>
+                  <span class="skill-pill">REST APIs</span>
+                  <span class="skill-pill">Postman</span>
+                  <span class="skill-pill">Git</span>
+                  <span class="skill-pill">Bitbucket</span>
+                  <span class="skill-pill">Jenkins</span>
+                  <span class="skill-pill">Agile Methodologies</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. INTERNSHIPS & EARLY ROLES -->
+            <article class="exp-company-card" data-category="early">
+              <div class="exp-header-top">
+                <div class="company-title-area">
+                  <h2>Early Career Roles & Specialised Internships</h2>
+                  <div class="company-subtitle">
+                    Data Science, Web Development & Technical Communication
+                  </div>
+                </div>
+                <div class="badge-group">
+                  <span class="exp-duration-badge">Foundational Roles</span>
+                  <span class="exp-type-badge">Internships & Engagements</span>
+                </div>
+              </div>
+
+              <div class="exp-body-text">
+                A diverse technical background spanning data science, web
+                development, content creation, and community leadership. These
+                foundational experiences laid the groundwork for analytical
+                problem-solving, structured programming, and effective
+                stakeholder communication.
+              </div>
+
+              <div class="early-roles-grid">
+                <div class="early-role-card">
+                  <h4>Data Science Intern</h4>
+                  <div class="early-role-company">
+                    Hope Artificial Intelligence
+                  </div>
+                  <p>
+                    Worked on data cleaning, exploratory data analysis,
+                    predictive modeling, and AI-related analytical projects
+                    using Python algorithms.
+                  </p>
+                </div>
+
+                <div class="early-role-card">
+                  <h4>Web Development Intern</h4>
+                  <div class="early-role-company">AICL Training</div>
+                  <p>
+                    Developed core front-end skills in HTML5, CSS3, and
+                    JavaScript, creating modern layout components and user
+                    interface designs.
+                  </p>
+                </div>
+
+                <div class="early-role-card">
+                  <h4>Content Writer & Ambassador</h4>
+                  <div class="early-role-company">SWAP Inc. & Lyriclious</div>
+                  <p>
+                    Crafted technical content, managed brand communication
+                    strategies, and spearheaded community engagement
+                    initiatives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tech-stack-container" style="margin-top: 1.2rem">
+                <div class="tech-stack-label">Core Skills Developed</div>
+                <div class="skills-pills">
+                  <span class="skill-pill">Data Science</span>
+                  <span class="skill-pill">Data Analysis</span>
+                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">Web Design</span>
+                  <span class="skill-pill">Front-End Development</span>
+                  <span class="skill-pill">Technical Writing</span>
+                  <span class="skill-pill">Community Engagement</span>
+                  <span class="skill-pill">Problem Solving</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CORE COMPETENCIES MATRIX SECTION -->
+      <section
+        style="
+          background: var(--surface);
+          border-top: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
+        "
+      >
+        <div class="wrap">
+          <h2>5+ Years Experience Summary Matrix</h2>
+          <div
+            class="skills"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              margin-top: 1.5rem;
+            "
+          >
+            <div class="skill-group">
+              <h3>Network Operations (2+ Yrs)</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                TCP/IP suite, routing, wireless networks, network
+                troubleshooting, and 99.9%+ SLA availability at Sify
+                Technologies.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Enterprise AEM Solutions (3+ Yrs)</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                AEM 6.5, Sling Models, HTL templates, Content Fragments, Apache
+                Dispatcher, Adobe Target, and Akamai CDN at TCS.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Cloud & Observability</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                AWS cloud infrastructure, AWS CloudWatch monitoring, AppDynamics
+                application performance management, and Jenkins CI/CD.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Web & Design Excellence</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                Modern front-end engineering (HTML5, CSS, JavaScript), REST API
+                integrations with Postman, and Figma UI/UX prototyping.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT BANNER -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="contact-box">
+            <h2>Interested in working together or discussing opportunities?</h2>
+            <p>
+              With 5+ years of proven IT industry experience across enterprise
+              networking, AEM development, and web infrastructure, I am ready to
+              deliver high-value results.
+            </p>
+            <div class="actions">
+              <a class="btn primary" id="mailBtn" href="mailto:you@example.com"
+                >Email me</a
+              >
+              <button class="btn ghost" id="copyBtn">Copy email address</button>
+              <a class="btn ghost" href="skills.html"
+                >Explore Detailed Skills</a
+              >
+              <a class="btn ghost" href="projects/projects.html"
+                >View Case Studies</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">Built with plain HTML, CSS and JavaScript.</div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Shared Theme JS -->
+    <script src="theme.js"></script>
+
+    <!-- Experience Filter & Search Script -->
+    <script>
+      const profile = { name: "Arul Selvakumar", email: "you@example.com" };
+
+      document.title = `Professional Experience | ${profile.name} - 5+ Years IT Industry`;
+      document.getElementById("logoName").textContent = profile.name;
+      document.getElementById("mailBtn").href = "mailto:" + profile.email;
+
+      /* Filter & Search Logic */
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".exp-company-card");
+      const searchInput = document.getElementById("searchInput");
+
+      let currentFilter = "all";
+      let currentSearch = "";
+
+      function filterExperience() {
+        cards.forEach((card) => {
+          const cat = card.dataset.category;
+          const text = card.textContent.toLowerCase();
+
+          const matchesFilter =
+            currentFilter === "all" || cat === currentFilter;
+          const matchesSearch = text.includes(currentSearch);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.dataset.filter;
+          filterExperience();
+        });
+      });
+
+      searchInput.addEventListener("input", (e) => {
+        currentSearch = e.target.value.toLowerCase().trim();
+        filterExperience();
+      });
+
+      /* Copy Email Toast */
+      const toast = document.getElementById("toast");
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2200);
+      }
+      document.getElementById("copyBtn").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(profile.email);
+          showToast("Email address copied");
+        } catch (e) {
+          showToast("Copy failed: " + profile.email);
+        }
+      });
+    </script>
+  </body>
+</html>

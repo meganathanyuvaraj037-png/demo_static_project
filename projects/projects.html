@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Projects | Arul Selvakumar</title>
+
+    <!-- Existing portfolio stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================
+       PROJECT PAGE INTERNAL CSS
+       ========================================= -->
+
+    <style>
+      .site-header {
+        width: 100%;
+      }
+
+      .site-header .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+      }
+
+      .logo {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 32px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: 15px;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.7;
+      }
+
+      .projects-page {
+        width: min(1180px, 100% - 2.5rem);
+        margin: 0 auto;
+        padding: 4rem 0 5rem;
+      }
+
+      /* ---------- Page Heading ---------- */
+
+      .projects-heading {
+        margin-bottom: 2.5rem;
+      }
+
+      .section-label {
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border-radius: 6px;
+        background: var(--brand-light);
+        color: var(--brand);
+        font: 600 0.75rem var(--mono);
+        letter-spacing: 0.04em;
+      }
+
+      .projects-heading h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0.9rem 0 0.6rem;
+      }
+
+      .projects-heading p {
+        color: var(--muted);
+        max-width: 60ch;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* ---------- Project Grid ---------- */
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        align-items: stretch;
+      }
+
+      /* ---------- Project Card ---------- */
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1.5rem;
+
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+
+        background: var(--surface);
+
+        min-width: 0;
+
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--brand);
+      }
+
+      /* ---------- Card Header ---------- */
+
+      .project-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      .project-number {
+        font: 500 0.8rem var(--mono);
+        color: var(--brand);
+      }
+
+      .project-category {
+        padding: 0.3rem 0.55rem;
+
+        border-radius: 6px;
+
+        background: var(--brand-light);
+        color: var(--brand);
+
+        font: 600 0.65rem var(--mono);
+
+        text-align: right;
+      }
+
+      /* ---------- Project Title ---------- */
+
+      .project-card h2 {
+        font-size: 1.35rem;
+        line-height: 1.35;
+
+        margin: 1.2rem 0 0.7rem;
+      }
+
+      /* ---------- Description ---------- */
+
+      .project-description {
+        color: var(--muted);
+
+        font-size: 0.9rem;
+        line-height: 1.7;
+
+        margin: 0;
+      }
+
+      /* ---------- Technology Tags ---------- */
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 0.4rem;
+
+        margin: 1.2rem 0 1.5rem;
+      }
+
+      .project-tags span {
+        padding: 0.3rem 0.6rem;
+
+        border: 1px solid var(--line);
+        border-radius: 999px;
+
+        font-size: 0.72rem;
+      }
+
+      /* ---------- Workflow ---------- */
+
+      .workflow-box {
+        margin-top: auto;
+
+        padding: 1rem;
+
+        border-radius: 10px;
+
+        background: var(--bg);
+        border: 1px solid var(--line);
+      }
+
+      .workflow-heading {
+        margin-bottom: 0.8rem;
+
+        color: var(--brand);
+
+        font: 600 0.7rem var(--mono);
+      }
+
+      .workflow-code {
+        font: 0.78rem/1.5 var(--mono);
+
+        text-align: center;
+      }
+
+      .workflow-code div {
+        padding: 0.45rem 0.3rem;
+
+        color: var(--ink);
+      }
+
+      .workflow-code span {
+        display: block;
+
+        color: var(--brand);
+
+        line-height: 1;
+      }
+
+      /* ---------- Outcome ---------- */
+
+      .project-outcome {
+        margin-top: 1.3rem;
+
+        padding-top: 1rem;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .project-outcome > span {
+        color: var(--brand);
+
+        font: 600 0.7rem var(--mono);
+      }
+
+      .project-outcome p {
+        margin: 0.4rem 0 0;
+
+        color: var(--muted);
+
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      /* ---------- Responsive ---------- */
+
+      @media (max-width: 950px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-card {
+          max-width: 700px;
+
+          width: 100%;
+
+          margin-inline: auto;
+        }
+      }
+
+      /* ---------- Projects Page Navigation ---------- */
+
+      .projects-page .nav {
+        gap: 1.5rem;
+      }
+
+      .projects-page .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .projects-page .nav-links a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+
+      .projects-page #themeBtn {
+        font-size: 0.85rem;
+        padding: 0.55rem 0.9rem;
+        white-space: nowrap;
+      }
+
+      /* ---------- Back Button ---------- */
+
+      .project-back {
+        display: inline-block;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================
+       HEADER / NAVIGATION
+       ========================================= -->
+
+    <header>
+      <div class="wrap bar">
+        <a class="logo" href="../index.html" id="logoName">Portfolio Website</a>
+        <nav>
+          <a class="hide-sm" href="../index.html">Home</a>
+          <a class="hide-sm" href="../skills.html">Skills</a>
+          <a class="hide-sm" href="../experience.html">Experience</a>
+          <a class="hide-sm active" href="projects.html">Projects</a>
+          <a href="../five-year-roadmap/five-year-roadmap.html"
+            >5-Year Vision</a
+          >
+          <a class="hide-sm" href="../index.html#contact">Contact</a>
+          <button
+            class="icon-btn"
+            id="themeBtn"
+            aria-label="Switch between light and dark theme"
+          >
+            Dark mode
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================================
+       PROJECTS
+       ========================================= -->
+
+    <main>
+      <section class="projects-page">
+        <!-- Page Heading -->
+
+        <div class="projects-heading">
+          <span class="section-label"> DEVOPS PROJECTS </span>
+
+          <h1>Projects</h1>
+
+          <p>
+            Selected projects demonstrating automation, cloud infrastructure,
+            and monitoring practices.
+          </p>
+
+          <a href="../index.html#projects" class="btn ghost project-back">
+            ← Back to Case Studies
+          </a>
+        </div>
+
+        <!-- =====================================
+           PROJECT CARDS
+           ===================================== -->
+
+        <div class="project-grid">
+          <!-- ===================================
+             PROJECT 1
+             =================================== -->
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number"> 01 </span>
+
+              <span class="project-category"> CI/CD & AUTOMATION </span>
+            </div>
+
+            <h2>Zero-touch deployment pipeline</h2>
+
+            <p class="project-description">
+              A CI/CD pipeline for a microservices application that automates
+              testing, security scanning and deployment.
+            </p>
+
+            <div class="project-tags">
+              <span> GitHub Actions </span>
+
+              <span> Docker </span>
+
+              <span> Kubernetes </span>
+            </div>
+
+            <!-- Workflow -->
+
+            <div class="workflow-box">
+              <div class="workflow-heading">WORKFLOW</div>
+
+              <div class="workflow-code">
+                <div>Git Push</div>
+
+                <span>↓</span>
+
+                <div>GitHub Actions</div>
+
+                <span>↓</span>
+
+                <div>Docker Image</div>
+
+                <span>↓</span>
+
+                <div>Tests + Security Scan</div>
+
+                <span>↓</span>
+
+                <div>Kubernetes</div>
+              </div>
+            </div>
+
+            <!-- Outcome -->
+
+            <div class="project-outcome">
+              <span> OUTCOME </span>
+
+              <p>Teammates can release safely with a merge to main.</p>
+            </div>
+          </article>
+
+          <!-- ===================================
+             PROJECT 2
+             =================================== -->
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number"> 02 </span>
+
+              <span class="project-category"> IAC & CLOUD </span>
+            </div>
+
+            <h2>Cloud infrastructure as code</h2>
+
+            <p class="project-description">
+              A repeatable AWS environment defined in Terraform, replacing
+              manual infrastructure creation.
+            </p>
+
+            <div class="project-tags">
+              <span> Terraform </span>
+
+              <span> AWS </span>
+
+              <span> Git </span>
+            </div>
+
+            <!-- Workflow -->
+
+            <div class="workflow-box">
+              <div class="workflow-heading">WORKFLOW</div>
+
+              <div class="workflow-code">
+                <div>Infrastructure Code</div>
+
+                <span>↓</span>
+
+                <div>Terraform</div>
+
+                <span>↓</span>
+
+                <div>Networking</div>
+
+                <span>+</span>
+
+                <div>Compute + Storage</div>
+
+                <span>↓</span>
+
+                <div>Remote State</div>
+              </div>
+            </div>
+
+            <!-- Outcome -->
+
+            <div class="project-outcome">
+              <span> OUTCOME </span>
+
+              <p>A new environment takes minutes instead of days.</p>
+            </div>
+          </article>
+
+          <!-- ===================================
+             PROJECT 3
+             =================================== -->
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number"> 03 </span>
+
+              <span class="project-category"> MONITORING </span>
+            </div>
+
+            <h2>Monitoring and alerting stack</h2>
+
+            <p class="project-description">
+              Metrics, dashboards and alerts designed to identify issues before
+              they reach users.
+            </p>
+
+            <div class="project-tags">
+              <span> Prometheus </span>
+
+              <span> Grafana </span>
+
+              <span> Linux </span>
+            </div>
+
+            <!-- Workflow -->
+
+            <div class="workflow-box">
+              <div class="workflow-heading">WORKFLOW</div>
+
+              <div class="workflow-code">
+                <div>Metrics</div>
+
+                <span>↓</span>
+
+                <div>Prometheus</div>
+
+                <span>↓</span>
+
+                <div>Grafana Dashboards</div>
+
+                <span>↓</span>
+
+                <div>Alert Rules</div>
+
+                <span>↓</span>
+
+                <div>Notification Channel</div>
+              </div>
+            </div>
+
+            <!-- Outcome -->
+
+            <div class="project-outcome">
+              <span> OUTCOME </span>
+
+              <p>Issues are seen and triaged before they reach users.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Existing theme functionality -->
+
+    <script src="../theme.js"></script>
+  </body>
+</html>

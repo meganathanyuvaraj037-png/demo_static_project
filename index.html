@@ -1,307 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arul Selvakumar | DevOps Engineer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arul Selvakumar | DevOps Engineer</title>
 
-  <!-- Google Fonts: Manrope & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Manrope & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <header>
-    <div class="wrap bar">
-      <a class="logo" href="index.html" id="logoName">Arul Selvakumar</a>
-      <nav>
-        <a class="hide-sm" href="skills.html">Skills</a>
-        <a class="hide-sm" href="#experience">Experience</a>
-        <a class="hide-sm" href="#projects">Projects</a>
-        <a class="hide-sm" href="contact.html">Contact</a>
-        <button class="icon-btn" id="themeBtn" aria-label="Switch between light and dark theme">Dark mode</button>
-        <a href="five-year-roadmap/five-year-roadmap.html">5-Year Vision</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- HERO + PIPELINE -->
-    <section class="hero">
-      <div class="wrap">
-        <h1>I automate the path from commit to production.</h1>
-        <p class="lead">DevOps engineer focused on CI/CD, cloud infrastructure and reliable releases. I turn slow, manual deployments into pipelines that a team can trust. Run the demo below to see one in action.</p>
-        <div class="actions">
-          <a class="btn primary" href="skills.html">Explore Detailed Skills</a>
-          <a class="btn ghost" href="#contact">Contact me</a>
-        </div>
-
-        <div class="pipeline">
-          <div class="pipe-head">
-            <div>
-              <h3>Deploy pipeline demo</h3>
-              <p>Run a simulated release, or break the tests to see how the pipeline stops.</p>
-            </div>
-            <div class="pipe-controls">
-              <label><input type="checkbox" id="breakTests" /> Break the tests</label>
-              <button class="run" id="runBtn">Run pipeline</button>
-            </div>
-          </div>
-          <ol class="stages" id="stages"></ol>
-          <div class="log" id="log" role="log" aria-live="polite"><span class="log-empty">Waiting for a run. Press "Run pipeline".</span></div>
-        </div>
+  <body>
+    <header>
+      <div class="wrap bar">
+        <a class="logo" href="index.html" id="logoName">Portfolio Website</a>
+        <nav>
+          <a class="hide-sm active" href="index.html">Home</a>
+          <a class="hide-sm" href="skills.html">Skills</a>
+          <a class="hide-sm" href="experience.html">Experience</a>
+          <a class="hide-sm" href="projects/projects.html">Projects</a>
+          <a href="five-year-roadmap/five-year-roadmap.html">5-Year Vision</a>
+          <a class="hide-sm" href="#contact">Contact</a>
+          <button
+            class="icon-btn"
+            id="themeBtn"
+            aria-label="Switch between light and dark theme"
+          >
+            Dark mode
+          </button>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- SKILLS OVERVIEW -->
-    <section id="skills">
-      <div class="wrap">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
-          <div>
-            <h2>Toolbox Overview</h2>
-            <p style="color: var(--muted); margin-top: -1.2rem;">Quick view of core technical stack & competencies.</p>
-          </div>
-          <a href="skills.html" class="btn ghost" style="padding: 0.5rem 1.1rem; font-size: 0.9rem;">View Full Skills Page &rarr;</a>
-        </div>
-        <div class="skills" id="skillGrid"></div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="wrap">
-        <h2>Experience</h2>
-        <div class="timeline" id="timeline"></div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="wrap">
-        <h2>Case studies</h2>
-        <div id="caseList"></div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certs">
-      <div class="wrap">
-        <h2>Certifications</h2>
-        <div class="certs" id="certGrid"></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact-box">
-          <h2>Have a release process that needs fixing?</h2>
-          <p>Send me a message about your team, your stack and what slows you down. I'll reply within two working days.</p>
+    <main id="top">
+      <!-- HERO + PIPELINE -->
+      <section class="hero">
+        <div class="wrap">
+          <h1>I automate the path from commit to production.</h1>
+          <p class="lead">
+            DevOps engineer focused on CI/CD, cloud infrastructure and reliable
+            releases. I turn slow, manual deployments into pipelines that a team
+            can trust. Run the demo below to see one in action.
+          </p>
           <div class="actions">
-            <a class="btn primary" id="mailBtn" href="mailto:you@example.com">Email me</a>
-            <button class="btn ghost" id="copyBtn">Copy email address</button>
-            <a class="btn ghost" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn ghost" href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn primary" href="skills.html"
+              >Explore Detailed Skills</a
+            >
+            <a class="btn ghost" href="#contact">Contact me</a>
+          </div>
+
+          <div class="pipeline">
+            <div class="pipe-head">
+              <div>
+                <h3>Deploy pipeline demo</h3>
+                <p>
+                  Run a simulated release, or break the tests to see how the
+                  pipeline stops.
+                </p>
+              </div>
+              <div class="pipe-controls">
+                <label
+                  ><input type="checkbox" id="breakTests" /> Break the
+                  tests</label
+                >
+                <button class="run" id="runBtn">Run pipeline</button>
+              </div>
+            </div>
+            <ol class="stages" id="stages"></ol>
+            <div class="log" id="log" role="log" aria-live="polite">
+              <span class="log-empty"
+                >Waiting for a run. Press "Run pipeline".</span
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer><div class="wrap">Built with plain HTML, CSS and JavaScript.</div></footer>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <!-- SKILLS OVERVIEW -->
+      <section id="skills">
+        <div class="wrap">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              margin-bottom: 2rem;
+            "
+          >
+            <div>
+              <h2>Toolbox Overview</h2>
+              <p style="color: var(--muted); margin-top: -1.2rem">
+                Quick view of core technical stack & competencies.
+              </p>
+            </div>
+            <a
+              href="skills.html"
+              class="btn ghost"
+              style="padding: 0.5rem 1.1rem; font-size: 0.9rem"
+              >View Full Skills Page &rarr;</a
+            >
+          </div>
+          <div class="skills" id="skillGrid"></div>
+        </div>
+      </section>
 
-  <!-- Shared Theme JS -->
-  <script src="theme.js"></script>
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="wrap">
+          <h2>Experience</h2>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
 
-  <!-- Page Logic Script -->
-  <script>
-    const profile = { name: "Arul Selvakumar", email: "you@example.com" };
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="wrap">
+          <h2>Case studies</h2>
+          <div id="caseList"></div>
+          <div class="actions">
+            <a href="projects/projects.html" class="btn ghost">
+              View Detailed Projects &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
 
-    const skills = [
-      { group: "Cloud", items: ["AWS", "Azure", "EC2", "S3", "IAM", "VPC"] },
-      { group: "CI/CD", items: ["Jenkins", "GitHub Actions", "GitLab CI", "ArgoCD"] },
-      { group: "Infrastructure as code", items: ["Terraform", "Ansible", "CloudFormation"] },
-      { group: "Containers", items: ["Docker", "Kubernetes", "Helm"] },
-      { group: "Monitoring", items: ["Prometheus", "Grafana", "CloudWatch", "ELK"] },
-      { group: "Scripting and OS", items: ["Bash", "Python", "Linux", "Git"] }
-    ];
+      <!-- CERTIFICATIONS -->
+      <section id="certs">
+        <div class="wrap">
+          <h2>Certifications</h2>
+          <div class="certs" id="certGrid"></div>
+        </div>
+      </section>
 
-    const jobs = [
-      {
-        role: "DevOps Engineer", company: "Company Name", when: "2024 to present",
-        points: [
-          "Built and maintained CI/CD pipelines that build, test and deploy services automatically.",
-          "Wrote Terraform modules so environments can be created the same way every time.",
-          "Set up dashboards and alerts so the team finds problems before users do."
-        ]
-      },
-      {
-        role: "Junior DevOps Engineer", company: "Previous Company", when: "2022 to 2024",
-        points: [
-          "Containerized applications with Docker and helped move them to Kubernetes.",
-          "Automated routine server tasks with Bash and Python scripts."
-        ]
-      }
-    ];
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="contact-box">
+            <h2>Have a release process that needs fixing?</h2>
+            <p>
+              Send me a message about your team, your stack and what slows you
+              down. I'll reply within two working days.
+            </p>
+            <div class="actions">
+              <a class="btn primary" id="mailBtn" href="mailto:you@example.com"
+                >Email me</a
+              >
+              <button class="btn ghost" id="copyBtn">Copy email address</button>
+              <a
+                class="btn ghost"
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                class="btn ghost"
+                href="https://linkedin.com/in/your-username"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    const cases = [
-      {
-        title: "Zero-touch deployment pipeline",
-        summary: "A CI/CD pipeline for a microservices app.",
-        problem: "Releases were manual, slow and depended on one person.",
-        solution: "A pipeline that builds an image, runs tests and a security scan, then rolls out to Kubernetes.",
-        result: "Any teammate can release safely with a merge to main.",
-        tags: ["GitHub Actions", "Docker", "Kubernetes"]
-      },
-      {
-        title: "Cloud infrastructure as code",
-        summary: "A repeatable AWS environment defined in Terraform.",
-        problem: "Servers were created by hand, so staging and production drifted apart.",
-        solution: "Reusable Terraform modules for networking, compute and storage, with remote state.",
-        result: "A new environment now takes minutes instead of days.",
-        tags: ["Terraform", "AWS", "Git"]
-      },
-      {
-        title: "Monitoring and alerting stack",
-        summary: "Metrics, dashboards and on-call alerts.",
-        problem: "The team learned about outages from customers.",
-        solution: "Prometheus and Grafana dashboards with alert rules that notify the right channel.",
-        result: "Issues are seen and triaged before they reach users.",
-        tags: ["Prometheus", "Grafana", "Linux"]
-      }
-    ];
+    <footer>
+      <div class="wrap">Built with plain HTML, CSS and JavaScript.</div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    const certs = [
-      { name: "AWS Certified Cloud Practitioner", meta: "AWS Certification" },
-      { name: "HashiCorp Terraform Associate", meta: "HashiCorp Certification" },
-      { name: "Certified Kubernetes Administrator", meta: "CNCF Certification" }
-    ];
+    <!-- Shared Theme JS -->
+    <script src="theme.js"></script>
 
-    /* Render Content */
-    document.title = `${profile.name} | DevOps Engineer`;
-    document.getElementById("logoName").textContent = profile.name;
-    document.getElementById("mailBtn").href = "mailto:" + profile.email;
+    <!-- Page Logic Script -->
+    <script>
+      const profile = { name: "Arul Selvakumar", email: "you@example.com" };
 
-    document.getElementById("skillGrid").innerHTML = skills.map(s => `
+      const skills = [
+        { group: "Cloud", items: ["AWS", "Azure", "EC2", "S3", "IAM", "VPC"] },
+        {
+          group: "CI/CD",
+          items: ["Jenkins", "GitHub Actions", "GitLab CI", "ArgoCD"],
+        },
+        {
+          group: "Infrastructure as code",
+          items: ["Terraform", "Ansible", "CloudFormation"],
+        },
+        { group: "Containers", items: ["Docker", "Kubernetes", "Helm"] },
+        {
+          group: "Monitoring",
+          items: ["Prometheus", "Grafana", "CloudWatch", "ELK"],
+        },
+        {
+          group: "Scripting and OS",
+          items: ["Bash", "Python", "Linux", "Git"],
+        },
+      ];
+
+      const jobs = [
+        {
+          role: "DevOps Engineer",
+          company: "Company Name",
+          when: "2024 to present",
+          points: [
+            "Built and maintained CI/CD pipelines that build, test and deploy services automatically.",
+            "Wrote Terraform modules so environments can be created the same way every time.",
+            "Set up dashboards and alerts so the team finds problems before users do.",
+          ],
+        },
+        {
+          role: "Junior DevOps Engineer",
+          company: "Previous Company",
+          when: "2022 to 2024",
+          points: [
+            "Containerized applications with Docker and helped move them to Kubernetes.",
+            "Automated routine server tasks with Bash and Python scripts.",
+          ],
+        },
+      ];
+
+      const cases = [
+        {
+          title: "Zero-touch deployment pipeline",
+          summary: "A CI/CD pipeline for a microservices app.",
+          problem: "Releases were manual, slow and depended on one person.",
+          solution:
+            "A pipeline that builds an image, runs tests and a security scan, then rolls out to Kubernetes.",
+          result: "Any teammate can release safely with a merge to main.",
+          tags: ["GitHub Actions", "Docker", "Kubernetes"],
+        },
+        {
+          title: "Cloud infrastructure as code",
+          summary: "A repeatable AWS environment defined in Terraform.",
+          problem:
+            "Servers were created by hand, so staging and production drifted apart.",
+          solution:
+            "Reusable Terraform modules for networking, compute and storage, with remote state.",
+          result: "A new environment now takes minutes instead of days.",
+          tags: ["Terraform", "AWS", "Git"],
+        },
+        {
+          title: "Monitoring and alerting stack",
+          summary: "Metrics, dashboards and on-call alerts.",
+          problem: "The team learned about outages from customers.",
+          solution:
+            "Prometheus and Grafana dashboards with alert rules that notify the right channel.",
+          result: "Issues are seen and triaged before they reach users.",
+          tags: ["Prometheus", "Grafana", "Linux"],
+        },
+      ];
+
+      const certs = [
+        { name: "AWS Certified Cloud Practitioner", meta: "AWS Certification" },
+        {
+          name: "HashiCorp Terraform Associate",
+          meta: "HashiCorp Certification",
+        },
+        {
+          name: "Certified Kubernetes Administrator",
+          meta: "CNCF Certification",
+        },
+      ];
+
+      /* Render Content */
+      document.title = `${profile.name} | DevOps Engineer`;
+      document.getElementById("logoName").textContent = profile.name;
+      document.getElementById("mailBtn").href = "mailto:" + profile.email;
+
+      document.getElementById("skillGrid").innerHTML = skills
+        .map(
+          (s) => `
       <div class="skill-group">
         <h3>${s.group}</h3>
-        <ul>${s.items.map(i => `<li>${i}</li>`).join("")}</ul>
-      </div>`).join("");
+        <ul>${s.items.map((i) => `<li>${i}</li>`).join("")}</ul>
+      </div>`
+        )
+        .join("");
 
-    document.getElementById("timeline").innerHTML = jobs.map(j => `
+      document.getElementById("timeline").innerHTML = jobs
+        .map(
+          (j) => `
       <article class="job">
         <h3>${j.role}, ${j.company}</h3>
         <div class="when">${j.when}</div>
-        <ul>${j.points.map(p => `<li>${p}</li>`).join("")}</ul>
-      </article>`).join("");
+        <ul>${j.points.map((p) => `<li>${p}</li>`).join("")}</ul>
+      </article>`
+        )
+        .join("");
 
-    document.getElementById("caseList").innerHTML = cases.map(c => `
+      document.getElementById("caseList").innerHTML = cases
+        .map(
+          (c) => `
       <article class="case">
         <div>
           <h3>${c.title}</h3>
           <p>${c.summary}</p>
-          <div class="tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+          <div class="tags">${c.tags
+            .map((t) => `<span class="tag">${t}</span>`)
+            .join("")}</div>
         </div>
         <dl>
           <div><dt>Problem</dt><dd>${c.problem}</dd></div>
           <div><dt>What I built</dt><dd>${c.solution}</dd></div>
           <div><dt>Outcome</dt><dd>${c.result}</dd></div>
         </dl>
-      </article>`).join("");
+      </article>`
+        )
+        .join("");
 
-    document.getElementById("certGrid").innerHTML = certs.map(c => `
-      <div class="cert"><b>${c.name}</b><br><small>${c.meta}</small></div>`).join("");
+      document.getElementById("certGrid").innerHTML = certs
+        .map(
+          (c) => `
+      <div class="cert"><b>${c.name}</b><br><small>${c.meta}</small></div>`
+        )
+        .join("");
 
-    /* Pipeline Runner Logic */
-    const stages = [
-      { name: "Commit", note: "git push", logs: ["Push received on branch main", "Webhook triggered the pipeline"] },
-      { name: "Build", note: "docker build", logs: ["Pulling base image", "Installing dependencies", "Image built: app:1.4.2"] },
-      { name: "Test", note: "unit and API tests", logs: ["Running 48 unit tests", "Running 12 API tests"], failLog: "3 tests failed: checkout_total, login_timeout, cart_empty" },
-      { name: "Scan", note: "security check", logs: ["Scanning image for vulnerabilities", "No critical issues found"] },
-      { name: "Deploy", note: "kubectl rollout", logs: ["Applying manifests to the cluster", "Rolling update: 3 of 3 pods ready", "Health check passed"] }
-    ];
+      /* Pipeline Runner Logic */
+      const stages = [
+        {
+          name: "Commit",
+          note: "git push",
+          logs: [
+            "Push received on branch main",
+            "Webhook triggered the pipeline",
+          ],
+        },
+        {
+          name: "Build",
+          note: "docker build",
+          logs: [
+            "Pulling base image",
+            "Installing dependencies",
+            "Image built: app:1.4.2",
+          ],
+        },
+        {
+          name: "Test",
+          note: "unit and API tests",
+          logs: ["Running 48 unit tests", "Running 12 API tests"],
+          failLog: "3 tests failed: checkout_total, login_timeout, cart_empty",
+        },
+        {
+          name: "Scan",
+          note: "security check",
+          logs: [
+            "Scanning image for vulnerabilities",
+            "No critical issues found",
+          ],
+        },
+        {
+          name: "Deploy",
+          note: "kubectl rollout",
+          logs: [
+            "Applying manifests to the cluster",
+            "Rolling update: 3 of 3 pods ready",
+            "Health check passed",
+          ],
+        },
+      ];
 
-    const stageList = document.getElementById("stages");
-    const logBox = document.getElementById("log");
-    const runBtn = document.getElementById("runBtn");
-    const breakBox = document.getElementById("breakTests");
+      const stageList = document.getElementById("stages");
+      const logBox = document.getElementById("log");
+      const runBtn = document.getElementById("runBtn");
+      const breakBox = document.getElementById("breakTests");
 
-    function drawStages() {
-      stageList.innerHTML = stages.map((s, i) => `
+      function drawStages() {
+        stageList.innerHTML = stages
+          .map(
+            (s, i) => `
         <li class="stage" data-state="idle" id="stage-${i}">
           <b><span class="dot"></span>${s.name}</b>
           <span>${s.note}</span>
-        </li>`).join("");
-    }
+        </li>`
+          )
+          .join("");
+      }
 
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    let startTime = 0;
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+      let startTime = 0;
 
-    function log(text, kind = "") {
-      const secs = ((Date.now() - startTime) / 1000).toFixed(1).padStart(4, "0");
-      const line = document.createElement("div");
-      line.innerHTML = `<span class="t">[${secs}s]</span><span class="${kind}">${text}</span>`;
-      logBox.appendChild(line);
-      logBox.scrollTop = logBox.scrollHeight;
-    }
+      function log(text, kind = "") {
+        const secs = ((Date.now() - startTime) / 1000)
+          .toFixed(1)
+          .padStart(4, "0");
+        const line = document.createElement("div");
+        line.innerHTML = `<span class="t">[${secs}s]</span><span class="${kind}">${text}</span>`;
+        logBox.appendChild(line);
+        logBox.scrollTop = logBox.scrollHeight;
+      }
 
-    const setState = (i, state) => document.getElementById("stage-" + i).dataset.state = state;
+      const setState = (i, state) =>
+        (document.getElementById("stage-" + i).dataset.state = state);
 
-    async function runPipeline() {
-      runBtn.disabled = true;
-      drawStages();
-      logBox.innerHTML = "";
-      startTime = Date.now();
-      log("Pipeline started");
+      async function runPipeline() {
+        runBtn.disabled = true;
+        drawStages();
+        logBox.innerHTML = "";
+        startTime = Date.now();
+        log("Pipeline started");
 
-      for (let i = 0; i < stages.length; i++) {
-        const s = stages[i];
-        setState(i, "running");
-        log(`Stage: ${s.name}`, "warn");
+        for (let i = 0; i < stages.length; i++) {
+          const s = stages[i];
+          setState(i, "running");
+          log(`Stage: ${s.name}`, "warn");
 
-        for (const line of s.logs) { await sleep(450); log(line); }
+          for (const line of s.logs) {
+            await sleep(450);
+            log(line);
+          }
 
-        if (s.name === "Test" && breakBox.checked) {
-          await sleep(450);
-          log(s.failLog, "err");
-          setState(i, "failed");
-          for (let j = i + 1; j < stages.length; j++) setState(j, "skipped");
-          log("Pipeline stopped. Nothing was deployed.", "err");
-          log("Alert sent to the on-call channel", "warn");
-          runBtn.disabled = false;
-          return;
+          if (s.name === "Test" && breakBox.checked) {
+            await sleep(450);
+            log(s.failLog, "err");
+            setState(i, "failed");
+            for (let j = i + 1; j < stages.length; j++) setState(j, "skipped");
+            log("Pipeline stopped. Nothing was deployed.", "err");
+            log("Alert sent to the on-call channel", "warn");
+            runBtn.disabled = false;
+            return;
+          }
+          await sleep(300);
+          setState(i, "success");
+          log(`${s.name} passed`, "ok");
         }
-        await sleep(300);
-        setState(i, "success");
-        log(`${s.name} passed`, "ok");
+        log("Release complete. Version 1.4.2 is live.", "ok");
+        runBtn.disabled = false;
       }
-      log("Release complete. Version 1.4.2 is live.", "ok");
-      runBtn.disabled = false;
-    }
 
-    runBtn.addEventListener("click", runPipeline);
-    drawStages();
+      runBtn.addEventListener("click", runPipeline);
+      drawStages();
 
-    /* Copy Email Toast */
-    const toast = document.getElementById("toast");
-    function showToast(msg) {
-      toast.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 2200);
-    }
-    document.getElementById("copyBtn").addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(profile.email);
-        showToast("Email address copied");
-      } catch (e) {
-        showToast("Copy failed. Please copy it manually: " + profile.email);
+      /* Copy Email Toast */
+      const toast = document.getElementById("toast");
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2200);
       }
-    });
-  </script>
-</body>
+      document.getElementById("copyBtn").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(profile.email);
+          showToast("Email address copied");
+        } catch (e) {
+          showToast("Copy failed. Please copy it manually: " + profile.email);
+        }
+      });
+    </script>
+  </body>
 </html>

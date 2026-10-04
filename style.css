@@ -157,6 +157,57 @@ nav a.active { border-bottom: 2px solid var(--brand); padding-bottom: 2px; }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
 .tag { font-size: .82rem; padding: .12rem .65rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
 
+/* ---------- Detailed Projects Page ---------- */
+
+.project-detail {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-detail:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.project-number {
+  font: 500 1rem var(--mono);
+  color: var(--brand);
+  padding-top: .4rem;
+}
+
+.project-content h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin-bottom: .7rem;
+}
+
+.project-summary {
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.project-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-sections h3 {
+  font-size: .95rem;
+  margin-bottom: .35rem;
+}
+
+.project-sections p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.project-back {
+  margin-top: 2rem;
+}
+
 /* ---------- 10. Certifications and contact ---------- */
 .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .cert { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.3rem; }
