@@ -55,365 +55,538 @@
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- DETAILED SKILLS SECTION -->
-    <section style="padding-top: 0;">
-      <div class="wrap">
+    <main>
+      <!-- HERO HEADER FOR SKILLS PAGE -->
+      <section class="page-header">
+        <div class="wrap">
+          <h1>Technical Capabilities & DevOps Stack</h1>
+          <p>
+            Deep dive into my expertise in cloud architecture, CI/CD automation,
+            infrastructure as code, container orchestration, and real-time
+            observability.
+          </p>
 
-        <!-- FILTER & SEARCH CONTROLS -->
-        <div class="controls-bar">
-          <div class="filter-tags" id="filterTags">
-            <button class="filter-btn active" data-filter="all">All Skills</button>
-            <button class="filter-btn" data-filter="cloud">Cloud Architecture</button>
-            <button class="filter-btn" data-filter="cicd">CI/CD & Releases</button>
-            <button class="filter-btn" data-filter="iac">IaC & Automation</button>
-            <button class="filter-btn" data-filter="containers">Containers & K8s</button>
-            <button class="filter-btn" data-filter="monitoring">Observability</button>
-            <button class="filter-btn" data-filter="scripting">Linux & Scripting</button>
-          </div>
-          <div class="search-box">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="searchInput" placeholder="Search skills or tools..." />
-          </div>
-        </div>
-
-        <!-- DETAILED CARDS GRID -->
-        <div class="skills-grid-detailed" id="detailedGrid">
-          <!-- Skill Card 1: Cloud -->
-          <article class="detail-card" data-category="cloud">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">Cloud Architecture</span>
-                <span class="level-badge">92% Mastery</span>
-              </div>
-              <h3>AWS & Cloud Infrastructure</h3>
-              <p>Designing scalable, multi-region cloud foundations on AWS and Azure with strict security controls, IAM role least-privilege, and cost management.</p>
-              
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Advanced</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 92%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">EC2 & ASG</span>
-                <span class="sub-tag">S3 & Lifecycle</span>
-                <span class="sub-tag">VPC Networking</span>
-                <span class="sub-tag">IAM & KMS</span>
-                <span class="sub-tag">Route53</span>
-                <span class="sub-tag">CloudWatch</span>
-                <span class="sub-tag">Azure VMs</span>
-              </div>
+          <div class="skills-stats">
+            <div class="stat-card">
+              <div class="num">6+</div>
+              <div class="label">Core DevOps Domains</div>
             </div>
-
-            <div class="code-box">
-              <span class="comment"># AWS VPC & Security Architecture</span><br/>
-              resource <span class="str">"aws_vpc"</span> <span class="str">"main"</span> {<br/>
-              &nbsp;&nbsp;cidr_block = <span class="str">"10.0.0.0/16"</span><br/>
-              &nbsp;&nbsp;enable_dns_hostnames = <span class="kw">true</span><br/>
-              }
+            <div class="stat-card">
+              <div class="num">25+</div>
+              <div class="label">Tools & Frameworks</div>
             </div>
-          </article>
-
-          <!-- Skill Card 2: CI/CD -->
-          <article class="detail-card" data-category="cicd">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">CI/CD & Releases</span>
-                <span class="level-badge">95% Mastery</span>
-              </div>
-              <h3>CI/CD Pipeline Engineering</h3>
-              <p>Building resilient release pipelines with automated linting, unit testing, container image security scans, and GitOps deployments.</p>
-
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Expert</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 95%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">GitHub Actions</span>
-                <span class="sub-tag">Jenkins</span>
-                <span class="sub-tag">GitLab CI</span>
-                <span class="sub-tag">ArgoCD</span>
-                <span class="sub-tag">Trivy Vulnerability Scan</span>
-                <span class="sub-tag">Canary Deployments</span>
-              </div>
+            <div class="stat-card">
+              <div class="num">100%</div>
+              <div class="label">IaC Automated Infra</div>
             </div>
-
-            <div class="code-box">
-              <span class="comment"># GitHub Actions Deployment Workflow</span><br/>
-              <span class="kw">jobs:</span><br/>
-              &nbsp;&nbsp;<span class="kw">deploy:</span><br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">runs-on:</span> ubuntu-latest<br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">steps:</span><br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="kw">uses:</span> actions/checkout@v4
+            <div class="stat-card">
+              <div class="num">99.9%</div>
+              <div class="label">Pipeline Reliability</div>
             </div>
-          </article>
-
-          <!-- Skill Card 3: IaC -->
-          <article class="detail-card" data-category="iac">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">IaC & Automation</span>
-                <span class="level-badge">90% Mastery</span>
-              </div>
-              <h3>Terraform & Ansible Infrastructure</h3>
-              <p>Provisioning declarative, version-controlled infrastructure with modular Terraform and automating configuration management via Ansible playbooks.</p>
-
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Advanced</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 90%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">Terraform Modules</span>
-                <span class="sub-tag">S3 Remote State</span>
-                <span class="sub-tag">DynamoDB State Lock</span>
-                <span class="sub-tag">Ansible Playbooks</span>
-                <span class="sub-tag">CloudFormation</span>
-                <span class="sub-tag">Terragrunt</span>
-              </div>
-            </div>
-
-            <div class="code-box">
-              <span class="comment"># Terraform Remote State Configuration</span><br/>
-              backend <span class="str">"s3"</span> {<br/>
-              &nbsp;&nbsp;bucket = <span class="str">"infra-tf-state-prod"</span><br/>
-              &nbsp;&nbsp;key    = <span class="str">"global/s3/terraform.tfstate"</span><br/>
-              &nbsp;&nbsp;region = <span class="str">"us-east-1"</span><br/>
-              }
-            </div>
-          </article>
-
-          <!-- Skill Card 4: Containers -->
-          <article class="detail-card" data-category="containers">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">Containers & K8s</span>
-                <span class="level-badge">88% Mastery</span>
-              </div>
-              <h3>Docker & Kubernetes Orchestration</h3>
-              <p>Architecting multi-stage Docker images and managing containerized microservices clusters using Kubernetes, Helm charts, and ingress routing.</p>
-
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Proficient</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 88%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">Docker Multi-stage</span>
-                <span class="sub-tag">Kubernetes Deployments</span>
-                <span class="sub-tag">Helm Charts</span>
-                <span class="sub-tag">Ingress Controller</span>
-                <span class="sub-tag">HPA Auto-scaling</span>
-                <span class="sub-tag">EKS / AKS</span>
-              </div>
-            </div>
-
-            <div class="code-box">
-              <span class="comment"># K8s Deployment Manifest</span><br/>
-              apiVersion: <span class="str">apps/v1</span><br/>
-              kind: <span class="str">Deployment</span><br/>
-              metadata:<br/>
-              &nbsp;&nbsp;name: <span class="str">api-service</span>
-            </div>
-          </article>
-
-          <!-- Skill Card 5: Monitoring -->
-          <article class="detail-card" data-category="monitoring">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">Observability</span>
-                <span class="level-badge">87% Mastery</span>
-              </div>
-              <h3>Prometheus, Grafana & ELK Stack</h3>
-              <p>Implementing full-stack monitoring, metrics collection, centralized logging, custom Grafana dashboards, and actionable alertmanager alerts.</p>
-
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Proficient</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 87%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">Prometheus Metrics</span>
-                <span class="sub-tag">Grafana Dashboards</span>
-                <span class="sub-tag">ELK Log Stacks</span>
-                <span class="sub-tag">Alertmanager</span>
-                <span class="sub-tag">Node Exporter</span>
-                <span class="sub-tag">CloudWatch Logs</span>
-              </div>
-            </div>
-
-            <div class="code-box">
-              <span class="comment"># Prometheus Alerting Rule</span><br/>
-              - alert: <span class="str">HighCpuUsage</span><br/>
-              &nbsp;&nbsp;expr: <span class="kw">rate(node_cpu_seconds_total[5m]) > 0.85</span><br/>
-              &nbsp;&nbsp;for: <span class="str">3m</span>
-            </div>
-          </article>
-
-          <!-- Skill Card 6: Scripting -->
-          <article class="detail-card" data-category="scripting">
-            <div class="card-top">
-              <div class="card-meta">
-                <span class="cat-badge">Linux & Scripting</span>
-                <span class="level-badge">94% Mastery</span>
-              </div>
-              <h3>Bash, Python & Linux System Admin</h3>
-              <p>Automating administrative tasks, writing system health scripts, configuring systemd services, managing network security, and handling Git workflows.</p>
-
-              <div class="prof-wrapper">
-                <div class="prof-header">
-                  <span>Proficiency</span>
-                  <span>Expert</span>
-                </div>
-                <div class="prof-bar"><div class="prof-fill" style="width: 94%;"></div></div>
-              </div>
-
-              <div class="sub-tags">
-                <span class="sub-tag">Bash Automation</span>
-                <span class="sub-tag">Python Scripts</span>
-                <span class="sub-tag">Linux Kernel Tuning</span>
-                <span class="sub-tag">Git Advanced</span>
-                <span class="sub-tag">SSH & SSL/TLS</span>
-                <span class="sub-tag">Cron & Systemd</span>
-              </div>
-            </div>
-
-            <div class="code-box">
-              <span class="comment">#!/usr/bin/env bash</span><br/>
-              <span class="comment"># Server health healthcheck script</span><br/>
-              <span class="kw">df</span> -h | <span class="kw">grep</span> -vE <span class="str">'^Filesystem|tmpfs'</span> | <span class="kw">awk</span> <span class="str">'{ print $5 " " $1 }'</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE DEVOPS METHODOLOGIES SECTION -->
-    <section style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-      <div class="wrap">
-        <h2>Engineering Principles & Best Practices</h2>
-        <div class="skills" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 1.5rem;">
-          <div class="skill-group">
-            <h3>Infrastructure as Code First</h3>
-            <p style="color: var(--muted); font-size: .92rem; margin-top: .4rem;">No manual console edits. Every server, VPC, bucket, and security rule is declared in code, peer-reviewed, and applied through pipelines.</p>
-          </div>
-          <div class="skill-group">
-            <h3>Zero-Downtime Deployments</h3>
-            <p style="color: var(--muted); font-size: .92rem; margin-top: .4rem;">Implementing rolling updates, blue-green environments, and canary releases to eliminate customer outage windows during deployments.</p>
-          </div>
-          <div class="skill-group">
-            <h3>Shift-Left Security (DevSecOps)</h3>
-            <p style="color: var(--muted); font-size: .92rem; margin-top: .4rem;">Automating SAST analysis, container vulnerability scanning (Trivy), and secret leakage prevention inside every pull request.</p>
-          </div>
-          <div class="skill-group">
-            <h3>Observability-Driven Operations</h3>
-            <p style="color: var(--muted); font-size: .92rem; margin-top: .4rem;">Tracking Four Golden Signals (Latency, Traffic, Errors, Saturation) with automated alerting before service degradation hits users.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT BANNER -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact-box">
-          <h2>Looking for a DevOps Engineer to streamline your stack?</h2>
-          <p>Let's talk about automated pipelines, cloud infrastructure, or reliability engineering for your product.</p>
-          <div class="actions">
-            <a class="btn primary" id="mailBtn" href="mailto:you@example.com">Email me</a>
-            <button class="btn ghost" id="copyBtn">Copy email address</button>
-            <a class="btn ghost" href="index.html#projects">View Case Studies</a>
+      <!-- DETAILED SKILLS SECTION -->
+      <section style="padding-top: 0">
+        <div class="wrap">
+          <!-- FILTER & SEARCH CONTROLS -->
+          <div class="controls-bar">
+            <div class="filter-tags" id="filterTags">
+              <button class="filter-btn active" data-filter="all">
+                All Skills
+              </button>
+              <button class="filter-btn" data-filter="cloud">
+                Cloud Architecture
+              </button>
+              <button class="filter-btn" data-filter="cicd">
+                CI/CD & Releases
+              </button>
+              <button class="filter-btn" data-filter="iac">
+                IaC & Automation
+              </button>
+              <button class="filter-btn" data-filter="containers">
+                Containers & K8s
+              </button>
+              <button class="filter-btn" data-filter="monitoring">
+                Observability
+              </button>
+              <button class="filter-btn" data-filter="scripting">
+                Linux & Scripting
+              </button>
+            </div>
+            <div class="search-box">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search skills or tools..."
+              />
+            </div>
+          </div>
+
+          <!-- DETAILED CARDS GRID -->
+          <div class="skills-grid-detailed" id="detailedGrid">
+            <!-- Skill Card 1: Cloud -->
+            <article class="detail-card" data-category="cloud">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">Cloud Architecture</span>
+                  <span class="level-badge">92% Mastery</span>
+                </div>
+                <h3>AWS & Cloud Infrastructure</h3>
+                <p>
+                  Designing scalable, multi-region cloud foundations on AWS and
+                  Azure with strict security controls, IAM role least-privilege,
+                  and cost management.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 92%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">EC2 & ASG</span>
+                  <span class="sub-tag">S3 & Lifecycle</span>
+                  <span class="sub-tag">VPC Networking</span>
+                  <span class="sub-tag">IAM & KMS</span>
+                  <span class="sub-tag">Route53</span>
+                  <span class="sub-tag">CloudWatch</span>
+                  <span class="sub-tag">Azure VMs</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment"># AWS VPC & Security Architecture</span
+                ><br />
+                resource <span class="str">"aws_vpc"</span>
+                <span class="str">"main"</span> {<br />
+                &nbsp;&nbsp;cidr_block = <span class="str">"10.0.0.0/16"</span
+                ><br />
+                &nbsp;&nbsp;enable_dns_hostnames = <span class="kw">true</span
+                ><br />
+                }
+              </div>
+            </article>
+
+            <!-- Skill Card 2: CI/CD -->
+            <article class="detail-card" data-category="cicd">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">CI/CD & Releases</span>
+                  <span class="level-badge">95% Mastery</span>
+                </div>
+                <h3>CI/CD Pipeline Engineering</h3>
+                <p>
+                  Building resilient release pipelines with automated linting,
+                  unit testing, container image security scans, and GitOps
+                  deployments.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Expert</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 95%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">GitHub Actions</span>
+                  <span class="sub-tag">Jenkins</span>
+                  <span class="sub-tag">GitLab CI</span>
+                  <span class="sub-tag">ArgoCD</span>
+                  <span class="sub-tag">Trivy Vulnerability Scan</span>
+                  <span class="sub-tag">Canary Deployments</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment"># GitHub Actions Deployment Workflow</span
+                ><br />
+                <span class="kw">jobs:</span><br />
+                &nbsp;&nbsp;<span class="kw">deploy:</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">runs-on:</span>
+                ubuntu-latest<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">steps:</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                <span class="kw">uses:</span> actions/checkout@v4
+              </div>
+            </article>
+
+            <!-- Skill Card 3: IaC -->
+            <article class="detail-card" data-category="iac">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">IaC & Automation</span>
+                  <span class="level-badge">90% Mastery</span>
+                </div>
+                <h3>Terraform & Ansible Infrastructure</h3>
+                <p>
+                  Provisioning declarative, version-controlled infrastructure
+                  with modular Terraform and automating configuration management
+                  via Ansible playbooks.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">Terraform Modules</span>
+                  <span class="sub-tag">S3 Remote State</span>
+                  <span class="sub-tag">DynamoDB State Lock</span>
+                  <span class="sub-tag">Ansible Playbooks</span>
+                  <span class="sub-tag">CloudFormation</span>
+                  <span class="sub-tag">Terragrunt</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment"
+                  ># Terraform Remote State Configuration</span
+                ><br />
+                backend <span class="str">"s3"</span> {<br />
+                &nbsp;&nbsp;bucket =
+                <span class="str">"infra-tf-state-prod"</span><br />
+                &nbsp;&nbsp;key =
+                <span class="str">"global/s3/terraform.tfstate"</span><br />
+                &nbsp;&nbsp;region = <span class="str">"us-east-1"</span><br />
+                }
+              </div>
+            </article>
+
+            <!-- Skill Card 4: Containers -->
+            <article class="detail-card" data-category="containers">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">Containers & K8s</span>
+                  <span class="level-badge">88% Mastery</span>
+                </div>
+                <h3>Docker & Kubernetes Orchestration</h3>
+                <p>
+                  Architecting multi-stage Docker images and managing
+                  containerized microservices clusters using Kubernetes, Helm
+                  charts, and ingress routing.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Proficient</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 88%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">Docker Multi-stage</span>
+                  <span class="sub-tag">Kubernetes Deployments</span>
+                  <span class="sub-tag">Helm Charts</span>
+                  <span class="sub-tag">Ingress Controller</span>
+                  <span class="sub-tag">HPA Auto-scaling</span>
+                  <span class="sub-tag">EKS / AKS</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment"># K8s Deployment Manifest</span><br />
+                apiVersion: <span class="str">apps/v1</span><br />
+                kind: <span class="str">Deployment</span><br />
+                metadata:<br />
+                &nbsp;&nbsp;name: <span class="str">api-service</span>
+              </div>
+            </article>
+
+            <!-- Skill Card 5: Monitoring -->
+            <article class="detail-card" data-category="monitoring">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">Observability</span>
+                  <span class="level-badge">87% Mastery</span>
+                </div>
+                <h3>Prometheus, Grafana & ELK Stack</h3>
+                <p>
+                  Implementing full-stack monitoring, metrics collection,
+                  centralized logging, custom Grafana dashboards, and actionable
+                  alertmanager alerts.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Proficient</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 87%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">Prometheus Metrics</span>
+                  <span class="sub-tag">Grafana Dashboards</span>
+                  <span class="sub-tag">ELK Log Stacks</span>
+                  <span class="sub-tag">Alertmanager</span>
+                  <span class="sub-tag">Node Exporter</span>
+                  <span class="sub-tag">CloudWatch Logs</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment"># Prometheus Alerting Rule</span><br />
+                - alert: <span class="str">HighCpuUsage</span><br />
+                &nbsp;&nbsp;expr:
+                <span class="kw">rate(node_cpu_seconds_total[5m]) > 0.85</span
+                ><br />
+                &nbsp;&nbsp;for: <span class="str">3m</span>
+              </div>
+            </article>
+
+            <!-- Skill Card 6: Scripting -->
+            <article class="detail-card" data-category="scripting">
+              <div class="card-top">
+                <div class="card-meta">
+                  <span class="cat-badge">Linux & Scripting</span>
+                  <span class="level-badge">94% Mastery</span>
+                </div>
+                <h3>Bash, Python & Linux System Admin</h3>
+                <p>
+                  Automating administrative tasks, writing system health
+                  scripts, configuring systemd services, managing network
+                  security, and handling Git workflows.
+                </p>
+
+                <div class="prof-wrapper">
+                  <div class="prof-header">
+                    <span>Proficiency</span>
+                    <span>Expert</span>
+                  </div>
+                  <div class="prof-bar">
+                    <div class="prof-fill" style="width: 94%"></div>
+                  </div>
+                </div>
+
+                <div class="sub-tags">
+                  <span class="sub-tag">Bash Automation</span>
+                  <span class="sub-tag">Python Scripts</span>
+                  <span class="sub-tag">Linux Kernel Tuning</span>
+                  <span class="sub-tag">Git Advanced</span>
+                  <span class="sub-tag">SSH & SSL/TLS</span>
+                  <span class="sub-tag">Cron & Systemd</span>
+                </div>
+              </div>
+
+              <div class="code-box">
+                <span class="comment">#!/usr/bin/env bash</span><br />
+                <span class="comment"># Server health healthcheck script</span
+                ><br />
+                <span class="kw">df</span> -h | <span class="kw">grep</span> -vE
+                <span class="str">'^Filesystem|tmpfs'</span> |
+                <span class="kw">awk</span>
+                <span class="str">'{ print $5 " " $1 }'</span>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer><div class="wrap">Built with plain HTML, CSS and JavaScript.</div></footer>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <!-- CORE DEVOPS METHODOLOGIES SECTION -->
+      <section
+        style="
+          background: var(--surface);
+          border-top: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
+        "
+      >
+        <div class="wrap">
+          <h2>Engineering Principles & Best Practices</h2>
+          <div
+            class="skills"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              margin-top: 1.5rem;
+            "
+          >
+            <div class="skill-group">
+              <h3>Infrastructure as Code First</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                No manual console edits. Every server, VPC, bucket, and security
+                rule is declared in code, peer-reviewed, and applied through
+                pipelines.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Zero-Downtime Deployments</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                Implementing rolling updates, blue-green environments, and
+                canary releases to eliminate customer outage windows during
+                deployments.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Shift-Left Security (DevSecOps)</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                Automating SAST analysis, container vulnerability scanning
+                (Trivy), and secret leakage prevention inside every pull
+                request.
+              </p>
+            </div>
+            <div class="skill-group">
+              <h3>Observability-Driven Operations</h3>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.92rem;
+                  margin-top: 0.4rem;
+                "
+              >
+                Tracking Four Golden Signals (Latency, Traffic, Errors,
+                Saturation) with automated alerting before service degradation
+                hits users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Shared Theme JS -->
-  <script src="theme.js"></script>
+      <!-- CONTACT BANNER -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="contact-box">
+            <h2>Looking for a DevOps Engineer to streamline your stack?</h2>
+            <p>
+              Let's talk about automated pipelines, cloud infrastructure, or
+              reliability engineering for your product.
+            </p>
+            <div class="actions">
+              <a class="btn primary" id="mailBtn" href="mailto:you@example.com"
+                >Email me</a
+              >
+              <button class="btn ghost" id="copyBtn">Copy email address</button>
+              <a class="btn ghost" href="index.html#projects"
+                >View Case Studies</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- Skills Filter & Search Script -->
-  <script>
-    const profile = { name: "Arul Selvakumar", email: "you@example.com" };
+    <footer>
+      <div class="wrap">Built with plain HTML, CSS and JavaScript.</div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    document.title = `Technical Skills | ${profile.name} - DevOps Engineer`;
-    document.getElementById("logoName").textContent = profile.name;
-    document.getElementById("mailBtn").href = "mailto:" + profile.email;
+    <!-- Shared Theme JS -->
+    <script src="theme.js"></script>
 
-    /* Filter by Category */
-    const filterBtns = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".detail-card");
-    const searchInput = document.getElementById("searchInput");
+    <!-- Skills Filter & Search Script -->
+    <script>
+      const profile = { name: "Arul Selvakumar", email: "you@example.com" };
 
-    let currentFilter = "all";
-    let currentSearch = "";
+      document.title = `Technical Skills | ${profile.name} - DevOps Engineer`;
+      document.getElementById("logoName").textContent = profile.name;
+      document.getElementById("mailBtn").href = "mailto:" + profile.email;
 
-    function filterSkills() {
-      cards.forEach(card => {
-        const cat = card.dataset.category;
-        const text = card.textContent.toLowerCase();
+      /* Filter by Category */
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".detail-card");
+      const searchInput = document.getElementById("searchInput");
 
-        const matchesFilter = currentFilter === "all" || cat === currentFilter;
-        const matchesSearch = text.includes(currentSearch);
+      let currentFilter = "all";
+      let currentSearch = "";
 
-        if (matchesFilter && matchesSearch) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
+      function filterSkills() {
+        cards.forEach((card) => {
+          const cat = card.dataset.category;
+          const text = card.textContent.toLowerCase();
+
+          const matchesFilter =
+            currentFilter === "all" || cat === currentFilter;
+          const matchesSearch = text.includes(currentSearch);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.dataset.filter;
+          filterSkills();
+        });
       });
-    }
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        currentFilter = btn.dataset.filter;
+      searchInput.addEventListener("input", (e) => {
+        currentSearch = e.target.value.toLowerCase().trim();
         filterSkills();
       });
-    });
 
-    searchInput.addEventListener("input", (e) => {
-      currentSearch = e.target.value.toLowerCase().trim();
-      filterSkills();
-    });
-
-    /* Copy Email Toast */
-    const toast = document.getElementById("toast");
-    function showToast(msg) {
-      toast.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 2200);
-    }
-    document.getElementById("copyBtn").addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(profile.email);
-        showToast("Email address copied");
-      } catch (e) {
-        showToast("Copy failed: " + profile.email);
+      /* Copy Email Toast */
+      const toast = document.getElementById("toast");
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2200);
       }
-    });
-  </script>
-</body>
+      document.getElementById("copyBtn").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(profile.email);
+          showToast("Email address copied");
+        } catch (e) {
+          showToast("Copy failed: " + profile.email);
+        }
+      });
+    </script>
+  </body>
 </html>
