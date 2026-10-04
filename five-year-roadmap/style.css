@@ -1,59 +1,162 @@
-.navbar {
+```css
+/* ================================
+   NAVBAR
+================================ */
+
+.site-header {
+    width: 100%;
+}
+
+.site-header .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.nav {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
 }
 
-.navbar a {
+.logo {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #f8fafc;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
 }
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* ================================
+   BODY
+================================ */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px;
-    background-color: #f4f7fb;
-    color: #333;
+    padding: 0;
+    background-color: #0f172a;
+    color: #e5e7eb;
 }
+
+
+/* ================================
+   PAGE HEADING
+================================ */
 
 h1 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    color: #f8fafc;
 }
 
 .intro {
     text-align: center;
-    margin-bottom: 40px;
-    color: #666;
+    margin-bottom: 45px;
+    color: #94a3b8;
+    font-size: 17px;
+    line-height: 1.6;
 }
+
+
+/* ================================
+   ROADMAP
+================================ */
 
 .roadmap {
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 30px;
 }
 
+
+/* ================================
+   YEAR CARDS
+================================ */
+
 .year {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #111827;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    border: 1px solid #263244;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.year:hover {
+    transform: translateY(-3px);
+    border-color: #475569;
 }
 
 .year h2 {
     margin-top: 0;
-    font-size: 24px;
     margin-bottom: 15px;
+    font-size: 24px;
+    color: #f8fafc;
+}
+
+.year p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
 
 .year ul {
     line-height: 1.8;
+    color: #94a3b8;
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+        padding: 0 20px;
+    }
+
+    .intro {
+        padding: 0 20px;
+    }
+
+    .roadmap {
+        padding: 0 20px;
+    }
+
+    .year {
+        padding: 24px;
+    }
 }
